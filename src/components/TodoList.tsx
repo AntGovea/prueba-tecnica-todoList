@@ -26,15 +26,19 @@ export const TodoList = () => {
     }, [])
 
     return (
-        <div className=' h-full  w-full bg-red-200 mt-8 '>
+        <div className=' h-[90%]  w-full'>
 
-            <div className='w-full mx-auto bg-black py-8 flex flex-wrap'>
+            <div className='w-full  bg-black flex flex-wrap justify-evenly'>
                 {
                     users.length ?
                         users.map((user: User) => {
 
                             return (
-                                <div className='w-3/6 h-full p-4 cursor-pointer flex flex-col bg-slate-300 m-4 rounded-3xl font-semibold ' key={user.userId} onClick={
+                                <div className='w-2/6 h-1/3 m-4 cursor-pointer 
+                                flex flex-col bg-slate-300  rounded-3xl
+                                 font-semibold text-center'
+                                 
+                                 key={user.userId} onClick={
                                     () => {
                                         setUserId(userId),
                                             getDetails()
